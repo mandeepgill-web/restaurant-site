@@ -85,12 +85,6 @@ body{
     display: grid;
     text-align: center;
 }
-/* .price{
-    display: grid;
-    text-align: center;
-    color: white;
-    line-height: 2.5rem;
-} */
 
 .price1, .price2{
     background-color:  rgb(50, 50, 80);
@@ -125,10 +119,13 @@ h2{
 
 /* items done  */
 
+.details img{grid-area: imgleft;}
+.text{grid-area: textright;}
+
 .details{
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr;
+    grid-template-areas: "imgleft textright";
     background-color: rgb(50, 50, 80);
     align-items: center;
     color: white;
@@ -136,11 +133,12 @@ h2{
 }
 
 .details img{
+    width: 100%;
     padding: 2rem 0 2rem 2rem;
 }
 
 .text{
-    padding: 2rem 0 2rem 0;
+    padding: 1.5rem;
 }
 
 .details a{
@@ -191,4 +189,14 @@ footer{
     .wrapper{
         margin: 1rem;
     }
+
+    .details{
+        grid-template-areas: "imgleft"
+        "textright";
+
+    }
+    .text{
+        padding:0 .5rem 1rem 1em;
+    }
+
     }
